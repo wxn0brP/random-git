@@ -6,3 +6,7 @@ export const resultDataDiv = qs("#result-data");
 export const langInput = qi("#language");
 export const pageInput = qi("#page");
 export const perPageInput = qi("#per-page");
+export const historyDiv = qs("#history");
+export const clearHistoryBtn = qs("#clearHistory");
+export const toggleHistoryBtn = qs("#toggleHistory");
+export const historyPanel = qs("#history-panel");

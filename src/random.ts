@@ -1,3 +1,4 @@
+import { renderHistory, saveToHistory } from "./history";
 import { btn, errorDiv, langInput, loadingDiv, pageInput, perPageInput, resultDataDiv, resultDiv } from "./html";
 import { CONFIG } from "./vars";
 import { langData } from "./words";
@@ -59,7 +60,11 @@ export async function findRandomRepo() {
 `;
 
             resultDataDiv.appendChild(div);
+
+            saveToHistory(repo.full_name as string);
         });
+
+        renderHistory();
 
         resultDiv.style.display = "";
     } catch (err) {
