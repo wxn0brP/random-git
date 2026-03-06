@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random GitHub Repo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="controls">
+            <label>
+                Language
+                <select id="language"></select>
+            </label>
+
+            <div class="row">
+                <label>
+                    Page
+                    <input type="number" id="page" min="1" max="1000" value="1">
+                </label>
+
+                <label>
+                    Per page
+                    <input type="number" id="per-page" min="1" max="100" value="1">
+                </label>
+            </div>
+
+            <button disabled>Guess</button>
+        </div>
+
+        <div id="loading">Loading data...</div>
+        <div id="error"></div>
+
+        <div id="result" style="display: none;">
+            <h2>Result:</h2>
+            <div id="result-data"></div>
+            <div id="word-display">
+                <h3>Word info</h3>
+                <strong>Word:</strong> <span id="word"></span> |
+                <strong>Category:</strong> <span id="category"></span> |
+                <strong>Language:</strong> <span id="lang"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

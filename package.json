@@ -1,0 +1,23 @@
+{
+    "name": "random-git",
+    "version": "0.0.1",
+    "main": "public/index.js",
+    "description": "",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wxn0brP/random-git.git"
+    },
+    "homepage": "https://github.com/wxn0brP/random-git",
+    "author": "wxn0brP",
+    "license": "MIT",
+    "type": "module",
+    "scripts": {
+        "build": "bun build src/index.ts --outdir public --sourcemap --minify"
+    },
+    "devDependencies": {
+        "typescript": "*"
+    },
+    "dependencies": {
+        "@wxn0brp/flanker-ui": "^0.5.1"
+    }
+}
