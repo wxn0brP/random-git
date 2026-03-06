@@ -1,0 +1,8 @@
+export const btn = qs<HTMLButtonElement>("button");
+export const loadingDiv = qs("#loading");
+export const errorDiv = qs("#error");
+export const resultDiv = qs("#result");
+export const resultDataDiv = qs("#result-data");
+export const langInput = qi("#language");
+export const pageInput = qi("#page");
+export const perPageInput = qi("#per-page");
