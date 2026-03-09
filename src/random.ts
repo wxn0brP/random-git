@@ -53,7 +53,7 @@ export async function findRandomRepo() {
 
             div.innerHTML = `
 <a href="${repo.html_url}" target="_blank">${repo.full_name}</a>
-<p>${repo.description ? "Description: " + repo.description : "-"}</p>
+<p>${repo.description ? "Description: " + repo.description : "No description"}</p>
 <p>Stars: ${repo.stargazers_count.toLocaleString()} | Forks: ${repo.forks_count.toLocaleString()}</p>
 <p>Repo language: ${repo.language || "-"}</p>
 <p>Updated: ${new Date(repo.updated_at).toLocaleDateString()}</p>

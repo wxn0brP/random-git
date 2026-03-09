@@ -1,25 +1,29 @@
-#result h3 {
-    margin-top: 1.5rem;
-    margin-bottom: 0.75rem;
-    color: #a0a0a0;
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 0.5rem;
+#container {
+    flex: 1;
 }
 
 #result-data {
     color: #e0e0e0;
     line-height: 1.7;
-    background: rgba(255, 255, 255, 0.03);
     border-radius: 8px;
-    padding: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    max-height: 300px;
+    padding: 3rem 1rem;
     overflow-y: auto;
     font-family: "Consolas", "Monaco", monospace;
     font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 100vh;
+}
+
+#result-data.minimal {
+    padding-top: .7rem !important;
+}
+
+#result-data div {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 6px;
+    padding: 0.5rem;
 }
 
 #result-data::-webkit-scrollbar {

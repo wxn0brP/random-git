@@ -1,7 +1,7 @@
 import { clearHistoryBtn, historyDiv, historyPanel, toggleHistoryBtn } from "./html";
+import { createToggle } from "./toggle";
 
 const HISTORY_KEY = "random-git-history";
-let collapsed = false;
 
 function getHistory(): string[] {
     try {
@@ -36,13 +36,6 @@ function clearHistory() {
     renderHistory();
 }
 
-function toggleHistory() {
-    collapsed = !collapsed;
-    historyPanel.classList.toggle("collapsed", collapsed);
-    toggleHistoryBtn.classList.toggle("collapsed", collapsed);
-    toggleHistoryBtn.textContent = collapsed ? "+" : "−";
-}
-
 renderHistory();
 clearHistoryBtn.addEventListener("click", clearHistory);
-toggleHistoryBtn.addEventListener("click", toggleHistory);
+toggleHistoryBtn.addEventListener("click", createToggle(toggleHistoryBtn, historyPanel));

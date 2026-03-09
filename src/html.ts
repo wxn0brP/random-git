@@ -1,4 +1,4 @@
-export const btn = qs<HTMLButtonElement>("button");
+export const btn = qs<HTMLButtonElement>("#guess");
 export const loadingDiv = qs("#loading");
 export const errorDiv = qs("#error");
 export const resultDiv = qs("#result");

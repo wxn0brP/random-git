@@ -1,22 +1,13 @@
-.container {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 16px;
-    padding: 2rem;
-    width: 100%;
-    max-width: 600px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+#controls {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    left: 0;
 }
 
-.controls {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    margin-bottom: 1.5rem;
+#controls.collapsed {
+    transform: translateX(-100%);
 }
 
-.controls label {
+#controls label {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -27,17 +18,17 @@
     letter-spacing: 0.08em;
 }
 
-.controls label:hover {
+#controls label:hover {
     color: #a0a0a0;
 }
 
-.controls label:has(#page),
-.controls label:has(#per-page) {
+#controls label:has(#page),
+#controls label:has(#per-page) {
     width: 40%;
 }
 
-.controls select,
-.controls input {
+#controls select,
+#controls input {
     width: 100%;
     padding: 0.75rem 1rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -48,14 +39,14 @@
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.controls select:focus,
-.controls input:focus {
+#controls select:focus,
+#controls input:focus {
     outline: none;
     border-color: #4a9eff;
     box-shadow: 0 0 0 3px rgba(74, 158, 255, 0.2);
 }
 
-.controls select option {
+#controls select option {
     background: #1a1a2e;
     color: #e0e0e0;
 }
