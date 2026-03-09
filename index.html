@@ -4,17 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
     <title>Random GitHub Repo</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/result.css">
     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/control.css">
     <link rel="stylesheet" href="css/history.css">
+    <link rel="stylesheet" href="css/panel.css">
+    <link rel="stylesheet" href="css/result.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="controls">
+    <main>
+        <div id="controls" class="panel">
             <label>
                 Language
                 <select id="language"></select>
@@ -32,32 +34,30 @@
                 </label>
             </div>
 
-            <button disabled>Guess</button>
+            <button id="guess" disabled>Guess</button>
         </div>
+        <div id="container">
+            <div id="loading">Loading data...</div>
+            <div id="error"></div>
 
-        <div id="loading">Loading data...</div>
-        <div id="error"></div>
-
-        <div id="result" style="display: none;">
-            <h2>Result:</h2>
-            <div id="result-data"></div>
-            <div id="word-display">
-                <h3>Word info</h3>
-                <strong>Word:</strong> <span id="word"></span> |
-                <strong>Category:</strong> <span id="category"></span> |
-                <strong>Language:</strong> <span id="lang"></span>
+            <div id="result" style="display: none;">
+                <div id="result-data" class="minimal"></div>
+                <div id="word-display">
+                    <strong>Word:</strong> <span id="word"></span> |
+                    <strong>Category:</strong> <span id="category"></span> |
+                    <strong>Language:</strong> <span id="lang"></span>
+                </div>
             </div>
         </div>
-    </div>
-
-    <button id="toggleHistory" class="toggle-btn">−</button>
-    <div id="history-panel">
-        <div id="history-header">
+        <div id="history-panel" class="panel">
             <h2>History</h2>
+            <button id="clearHistory">Clear</button>
+            <div id="history"></div>
         </div>
-        <button id="clearHistory">Clear</button>
-        <div id="history"></div>
-    </div>
+    </main>
+
+    <button id="toggleControl" class="toggle-btn left">−</button>
+    <button id="toggleHistory" class="toggle-btn right">−</button>
 
     <script src="index.js"></script>
 </body>

@@ -1,0 +1,58 @@
+.toggle-btn {
+    position: fixed;
+    top: 10px;
+    background: rgba(74, 158, 255, 0.2);
+    color: #4a9eff;
+    border: 1px solid rgba(74, 158, 255, 0.3);
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 100;
+    --space: 187px;
+}
+
+.toggle-btn:hover {
+    background: rgba(74, 158, 255, 0.3);
+}
+
+.toggle-btn.right {
+    right: var(--space);
+}
+
+.toggle-btn.left {
+    left: var(--space);
+}
+
+.toggle-btn.collapsed.right {
+    right: 10px;
+}
+
+.toggle-btn.collapsed.left {
+    left: 10px;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+
+    width: 250px;
+    height: 100vh;
+    background: rgba(20, 20, 25, 0.98);
+    padding: 1.5rem 1rem;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+}
+
+.panel.collapsed {
+    position: fixed;
+    top: 0;
+}

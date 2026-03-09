@@ -43,17 +43,6 @@ button:disabled {
     display: block;
 }
 
-#result {
-    margin-top: 1.5rem;
-}
-
-#result h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #4a9eff;
-    text-align: center;
-}
-
 #word-display {
     margin-top: 1rem;
     color: #ffffff;
@@ -65,4 +54,11 @@ button:disabled {
 #category {
     color: #ffffff;
     font-weight: 500;
+}
+
+#word-display {
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
 }
