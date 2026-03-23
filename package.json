@@ -15,7 +15,7 @@
         "build": "bun build src/index.ts --outdir public --sourcemap --minify"
     },
     "devDependencies": {
-        "typescript": "^5"
+        "typescript": "^6.0.0"
     },
     "dependencies": {
         "@wxn0brp/flanker-ui": "^0.5.1"
