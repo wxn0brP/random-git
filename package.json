@@ -15,9 +15,10 @@
         "build": "bun build src/index.ts --outdir public --sourcemap --minify"
     },
     "devDependencies": {
-        "typescript": "^6"
+        "@wxn0brp/biome": "*",
+        "typescript": "^7"
     },
     "dependencies": {
-        "@wxn0brp/flanker-ui": "^0.5.1"
+        "@wxn0brp/flanker-ui": "^0.5.2"
     }
 }
