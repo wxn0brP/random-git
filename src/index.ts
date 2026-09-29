@@ -1,6 +1,6 @@
 import "@wxn0brp/flanker-ui/html";
 
-import { btn, langInput } from "./html";
+import { btn, guessTabel, langInput } from "./html";
 import { findRandomRepo } from "./random";
 import { loadLangData } from "./words";
 import { createToggle } from "./toggle";
@@ -8,6 +8,7 @@ import { createToggle } from "./toggle";
 loadLangData();
 
 btn.addEventListener("click", findRandomRepo);
+guessTabel.addEventListener("click", findRandomRepo);
 langInput.on("change", () => {
 	qs("#findBtn").focus();
 });
@@ -15,7 +16,9 @@ langInput.on("change", () => {
 const controlsToggler = qs("#toggleControl");
 controlsToggler.addEventListener(
 	"click",
-	createToggle(controlsToggler, qs("#controls")),
+	createToggle(controlsToggler, qs("#controls"), (collapsed: boolean) => {
+		guessTabel.style.display = collapsed ? "" : "none";
+	}),
 );
 
 document.addEventListener("keydown", e => {

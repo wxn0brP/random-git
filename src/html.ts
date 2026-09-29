@@ -10,3 +10,4 @@ export const historyDiv = qs("#history");
 export const clearHistoryBtn = qs("#clearHistory");
 export const toggleHistoryBtn = qs("#toggleHistory");
 export const historyPanel = qs("#history-panel");
+export const guessTabel = qs("#guess-tabel");

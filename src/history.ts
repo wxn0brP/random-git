@@ -47,4 +47,4 @@ clearHistoryBtn.addEventListener("click", clearHistory);
 const toggleHistory = createToggle(toggleHistoryBtn, historyPanel);
 toggleHistoryBtn.addEventListener("click", toggleHistory);
 
-if (window.innerWidth < 800) toggleHistory();
+if (window.innerWidth < 1200) toggleHistory();

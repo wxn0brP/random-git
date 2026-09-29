@@ -1,6 +1,10 @@
 import { resultDataDiv } from "./html";
 
-export function createToggle(toggler: HTMLDivElement, panel: HTMLDivElement) {
+export function createToggle(
+	toggler: HTMLDivElement,
+	panel: HTMLDivElement,
+	cb?: (collapsed: boolean) => void,
+) {
 	let collapsed = false;
 
 	return () => {
@@ -11,5 +15,6 @@ export function createToggle(toggler: HTMLDivElement, panel: HTMLDivElement) {
 
 		const len = document.querySelectorAll(".panel.collapsed").length;
 		resultDataDiv.classList.toggle("minimal", !len);
+		cb?.(collapsed);
 	};
 }
