@@ -12,7 +12,8 @@
     "license": "MIT",
     "type": "module",
     "scripts": {
-        "build": "bun build src/index.ts --outdir public --sourcemap --minify"
+        "build": "bun build src/index.ts --outdir public --sourcemap --minify",
+        "fetch:words": "bun scripts/fetch-words.ts"
     },
     "devDependencies": {
         "@wxn0brp/biome": "*",

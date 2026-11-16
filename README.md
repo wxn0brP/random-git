@@ -6,17 +6,18 @@ https://wxn0brp.github.io/random-git
 
 ## Features
 
-- Fetches random words from a words API
+- Picks words from a word list bundled with the app (no external words API)
 - Searches GitHub repositories using those words
-- Filter by programming language
+- Filter by word language (16 languages)
 - Pagination support (page & per-page options)
 - Displays repository info: stars, forks, description, last update
 
 ## Tech Stack
 
 - **APIs:**
-  - Random Words API
   - GitHub Search API
+- **Words:**
+  - [FrequencyWords](https://github.com/hermitdave/FrequencyWords) (MIT).
 
 ## License
 

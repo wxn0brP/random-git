@@ -4,11 +4,25 @@ import { CONFIG } from "./vars";
 
 export let langData: Word[] = [];
 
+type WordsFile = Record<string, Record<string, string[]>>;
+
 export async function loadLangData() {
 	loadingDiv.style.display = "";
 	try {
-		const res = await fetch(CONFIG.WORDS_API);
-		langData = await res.json();
+		const res = await fetch(CONFIG.WORDS_DATA);
+		if (!res.ok) throw new Error(`words data: ${res.status}`);
+
+		const file = (await res.json()) as WordsFile;
+		langData = Object.entries(file).flatMap(([language, categories]) =>
+			Object.entries(categories).flatMap(([category, words]) =>
+				words.map(word => ({
+					word,
+					language,
+					category,
+					length: word.length,
+				})),
+			),
+		);
 
 		const langs = new Map<string, true>();
 
